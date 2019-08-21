@@ -4,5 +4,22 @@
   "description": "Projeto Final de Conclusão de Curso do IFSP",
   "main": "index.js",
   "author": "Willian Amaral <willian.amaral@outlook.com.br>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "next start",
+    "dev": "next",
+    "build": "next build"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "bloomer": "^0.6.5",
+    "bulma": "^0.7.5",
+    "isomorphic-unfetch": "^3.0.0",
+    "js-cookies": "^1.0.4",
+    "next": "^9.0.4",
+    "next-cookies": "^1.1.2",
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
 }
