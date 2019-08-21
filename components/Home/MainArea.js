@@ -1,5 +1,6 @@
 import { Columns, Column, Hero, HeroBody,
-    Title, Subtitle, Section } from 'bloomer';
+    Title, Subtitle, Section 
+} from 'bloomer';
 import Tiles from './Tiles';
 import CardItem from './CardItem';
 

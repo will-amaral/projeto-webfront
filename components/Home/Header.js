@@ -1,6 +1,7 @@
 import { Navbar, NavbarBrand, NavbarBurger,
     NavbarItem, NavbarMenu, Container,
-    NavbarStart, NavbarEnd, Button } from 'bloomer';
+    NavbarStart, NavbarEnd, Button 
+} from 'bloomer';
 
 export default function Header(props) { 
     const toggleMenu = () => {

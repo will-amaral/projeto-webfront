@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardHeaderTitle,
     CardHeaderIcon, CardContent, Content,
-    Icon, Control, Input } from 'bloomer';
+    Icon, Control, Input 
+} from 'bloomer';
 
 export default function CardItem(props) {
     return (
