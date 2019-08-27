@@ -4,12 +4,12 @@ import { Columns, Column, Hero, HeroBody,
 import Tiles from './Tiles';
 import CardItem from './CardItem';
 
-export default function MainArea({ profile: { name }}) {
+export default function MainArea({ profile }) {
     return (
         <Column isSize={9}>
             <Hero isColor="primary" isSize="small" isBold>
                 <HeroBody>
-                    <Title>Olá, jovem {name}</Title>
+                    <Title>Olá, jovem {profile.name}</Title>
                     <Subtitle>Tenha um ótimo dia!</Subtitle>
                 </HeroBody>
             </Hero>
