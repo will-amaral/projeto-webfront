@@ -3,7 +3,7 @@ import { Navbar, NavbarBrand, NavbarBurger,
     NavbarStart, NavbarEnd, Button 
 } from 'bloomer';
 
-export default function Header(props) { 
+export default function Header({ handleLogout }) { 
     const toggleMenu = () => {
         document.querySelector('.navbar-burger').classList.toggle('is-active');
         document.querySelector('#navMenu').classList.toggle('is-active');
@@ -28,7 +28,7 @@ export default function Header(props) {
                         <NavbarItem>Professores</NavbarItem>
                     </NavbarStart>
                     <NavbarEnd>
-                        <NavbarItem><Button isOutlined isColor='primary' onClick={props.handleClick}>Sair</Button></NavbarItem>
+                        <NavbarItem><Button isOutlined isColor='primary' onClick={handleLogout}>Sair</Button></NavbarItem>
                     </NavbarEnd>
                 </NavbarMenu>
             </Container>

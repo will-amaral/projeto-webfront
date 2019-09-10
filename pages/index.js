@@ -1,8 +1,8 @@
 import Master from '../components/Master';
 import Home from '../components/Home';
 import '../styles.scss';
-import { gql } from 'apollo-boost';
-import { api } from '../utils/auth';
+import api from '../utils/api';
+import { auth } from '../utils/auth';
 
 export default function Index(props) {
     return (
@@ -12,16 +12,8 @@ export default function Index(props) {
     );
 }
 
-Index.getInitialProps = async function() {
-    const result = await api.query({
-                            query: gql`
-                                {
-                                    users {
-                                        id
-                                        name
-                                        email
-                                    }
-                                }
-                            `});
-    return { user: result.data.users[0] };
+Index.getInitialProps = async function(ctx) {
+    auth(ctx);
+    const { data } = await api.get('/user/profile')
+    return { user: data.profile };
 }

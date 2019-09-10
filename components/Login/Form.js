@@ -40,7 +40,6 @@ export default function Form({ loading, handleSubmit}) {
             </Field>
             <Breadcrumb isAlign="centered">
                 <ul>
-                    <BreadcrumbItem><Link href='/cadastrar'><a>Cadastrar</a></Link></BreadcrumbItem>
                     <BreadcrumbItem><Link href='/recuperar-senha'><a>Recuperar a senha</a></Link></BreadcrumbItem>
                 </ul>
             </Breadcrumb>

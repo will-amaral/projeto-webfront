@@ -2,8 +2,11 @@ import { useState } from 'react';
 import { Hero, HeroBody, Container, Title,
     Subtitle, Columns, Column 
 } from 'bloomer';
+import Router from 'next/router';
 import CustomNotification from '../CustomNotification';
 import Form from './Form';
+import api from '../../utils/api';
+import { login } from '../../utils/auth';
 
 const backgroundStyles = {
     background: `linear-gradient(
@@ -18,9 +21,26 @@ export default function Login() {
     const [color, setColor] = useState('');
     const [loading, setLoading] = useState(false);
 
-    function handleSubmit() {
-        return
-    }
+
+    async function handleSubmit(event, email, password){
+        event.preventDefault();
+        if (!email || !password) {
+            setMessage('Preencha todos os campos para continuar!');
+            setColor('danger');
+        } else {
+            setLoading(true);
+            try {
+                const { data: { token } } = await api.post('/login', { email, password });
+                login(token);
+                Router.push('/');
+            } catch (err) {
+                const alert = !err.response ? "Erro de servidor" : err.response.data.message
+                setMessage(alert)
+                setColor('danger');
+            }
+            setLoading(false);
+        }
+    };
 
     return(
         <Columns isVCentered isGapless>

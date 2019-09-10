@@ -1,11 +1,28 @@
-import ApolloClient from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import fetch from 'isomorphic-unfetch';
-import { createHttpLink } from 'apollo-link-http';
+import Router from 'next/router';
+import cookie from 'js-cookie';
+import nextCookie from 'next-cookies';
 
-const link = createHttpLink({ uri: 'http://localhost:4000/', fetch: fetch });
-const cache = new InMemoryCache();
+export function login(token) {
+    cookie.set('token', token, { expires: 1 });
+    Router.push('/')
+}
 
-export const api = new ApolloClient({
-  cache, link
-});
+export function logout() {
+    cookie.remove('token');
+    Router.push('/login');
+}
+
+export function auth(ctx) {
+    const { token } = nextCookie(ctx);
+
+    if (ctx.req && !token) {
+        ctx.res.writeHead(302, { Location: '/login' });
+        ctx.res.end()
+    }
+
+    if (!token) {
+        Router.push('/login');
+    }
+
+    return token
+}
