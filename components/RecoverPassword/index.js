@@ -3,15 +3,7 @@ import { Title, Subtitle, Columns, Image } from 'bloomer';
 import Container from '../BoldContainer';
 import CustomNotification from '../CustomNotification'
 import Form from './Form';
-
-const styles = {
-    logo: {
-        width: 90, 
-        marginLeft: 'auto', 
-        marginRight: 'auto', 
-        marginBottom: 30
-    }
-}
+import styles from '../styles';
 
 export default function RecoverPassword() {
     const [loading, setLoading] = useState(false);

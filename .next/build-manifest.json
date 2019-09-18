@@ -18,11 +18,23 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/alunos": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/exercicios": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/login": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/professores": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

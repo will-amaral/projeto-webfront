@@ -3,13 +3,7 @@ import { Columns, Column, Hero, HeroBody,
 } from 'bloomer';
 import Tiles from './Tiles';
 import CardItem from './CardItem';
-
-const styles = {
-    gradient: {
-        background: `linear-gradient(
-            141deg, #04DB92 0%, #00D9D5 100%)`
-    }
-}
+import styles from '../styles';
 
 export default function Dashboard({ profile }) {
     return (
