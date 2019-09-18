@@ -9,7 +9,7 @@ export default function Form({ loading, handleSubmit}) {
     const [email, setEmail] = useState('');
 
     return (
-        <Column tag='form' isSize='1/2' onSubmit={handleSubmit}>
+        <Column tag='form' isSize='1/3' onSubmit={handleSubmit}>
              <FormField
                 icon='envelope'
                 onChange={event => setEmail(event.target.value)}

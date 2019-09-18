@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Hero, HeroBody, Container, Title,
-    Subtitle, Columns, Column 
+    Subtitle, Columns, Column, Image
 } from 'bloomer';
 import Router from 'next/router';
 import CustomNotification from '../CustomNotification';
@@ -8,12 +8,24 @@ import Form from './Form';
 import api from '../../utils/api';
 import { login } from '../../utils/auth';
 
-const backgroundStyles = {
-    background: `linear-gradient(
-        rgba(0, 158, 108, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ), url(/static/img/bg.jpg) no-repeat center center fixed`,
-    backgroundSize: 'cover' 
+const styles = {
+    background: {
+        background: `linear-gradient(
+            rgba(0, 158, 108, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ), url(/static/img/bg.jpg) no-repeat center center fixed`,
+        backgroundSize: 'cover' 
+    },
+    logo: {
+        width: 90, 
+        marginLeft: 'auto', 
+        marginRight: 'auto', 
+        marginBottom: 30
+    },
+    gradient: {
+        background: `linear-gradient(
+            141deg, #04DB92 0%, #00D9D5 100%)`
+    }
 }
 
 export default function Login() {
@@ -42,12 +54,13 @@ export default function Login() {
         }
     };
 
-    return(
+    return (
         <Columns isVCentered isGapless>
             <Column isSize={{mobile: "full", desktop: "1/4" }}>
-                <Hero isColor="primary" isFullHeight isBold>
+                <Hero isColor='primary' isFullHeight style={styles.gradient}>
                     <HeroBody>
-                        <Container hasTextAlign="centered">
+                        <Container hasTextAlign="centered" style={{ margin: 20}}>
+                            <Image style={styles.logo} src='/static/img/logo-white.png' />
                             <Title>Gym App</Title>
                             <Subtitle>Faça o login para prosseguir</Subtitle>
                             <CustomNotification
@@ -61,7 +74,7 @@ export default function Login() {
                 </Hero>
             </Column> 
             <Column isHidden="touch">
-                <Hero isFullHeight style={backgroundStyles} />
+                <Hero isFullHeight style={styles.background} />
             </Column>               
         </Columns>
     );

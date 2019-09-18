@@ -1,8 +1,17 @@
 import { useState } from 'react';
-import { Title, Subtitle, Columns } from 'bloomer';
+import { Title, Subtitle, Columns, Image } from 'bloomer';
 import Container from '../BoldContainer';
 import CustomNotification from '../CustomNotification'
 import Form from './Form';
+
+const styles = {
+    logo: {
+        width: 90, 
+        marginLeft: 'auto', 
+        marginRight: 'auto', 
+        marginBottom: 30
+    }
+}
 
 export default function RecoverPassword() {
     const [loading, setLoading] = useState(false);
@@ -14,6 +23,7 @@ export default function RecoverPassword() {
     }
     return (
         <Container>
+            <Image style={styles.logo} src='/static/img/logo-white.png' />
             <Title>Recuperar Senha</Title>
             <Subtitle>Entre seu e-mail abaixo e enviaremos um link de recuperação de senha</Subtitle>
             <CustomNotification

@@ -6181,7 +6181,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/home/will/Documents/School/Projeto-IFSP/projeto-webfront/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/home/will/Documents/School/projeto-ifsp/webfront/.next");
       return error;
     }
   };

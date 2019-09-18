@@ -16,13 +16,15 @@ export function auth(ctx) {
     const { token } = nextCookie(ctx);
 
     if (ctx.req && !token) {
+        console.log('Não existem cookies')
         ctx.res.writeHead(302, { Location: '/login' });
         ctx.res.end()
     }
 
     if (!token) {
+        console.log('Não existe token')
         Router.push('/login');
     }
-
+    console.log('Cookie: ' + token)
     return token
 }
