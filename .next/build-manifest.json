@@ -4,10 +4,6 @@
     "static/development/dll/dll_397dc449097af0b4e992.js.map"
   ],
   "pages": {
-    "/": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/_app": [
       "static/runtime/webpack.js",
       "static/css/styles.chunk.css",
@@ -18,15 +14,23 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/alunos": [
+    "/ajuda": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/exercicios": [
+    "/alertas": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/index": [
+    "/login": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/saude": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

@@ -1,6 +1,7 @@
 import Router from 'next/router';
 import cookie from 'js-cookie';
 import nextCookie from 'next-cookies';
+import { setHeader } from './api';
 
 export function login(token) {
     cookie.set('token', token, { expires: 1 });
@@ -28,3 +29,21 @@ export function auth(ctx) {
     console.log('Cookie: ' + token)
     return token
 }
+
+export function withAuth(WrappedComponent) {
+    function Wrapper(props) {
+        return <WrappedComponent {...props} />
+    }
+  
+    Wrapper.getInitialProps = async function(ctx) {
+        const token = auth(ctx);
+        setHeader(token);
+        const componentProps =
+            WrappedComponent.getInitialProps &&
+            (await WrappedComponent.getInitialProps(ctx))
+  
+        return { ...componentProps, token }
+    }
+  
+    return Wrapper
+  }
