@@ -11,7 +11,7 @@ export default function Master({ children }) {
                 key="viewport"
                 />
                 <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
-                <link rel="stylesheet" href="/static/fonts/css/all.css"/>
+                <link rel="stylesheet" href="/static/fonts/css/all.min.css"/>
             </Head>
             { children }
         </>

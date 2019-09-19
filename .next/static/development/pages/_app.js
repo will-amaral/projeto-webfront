@@ -419,7 +419,7 @@ function Master(_ref) {
     __self: this
   }), __jsx("link", {
     rel: "stylesheet",
-    href: "/static/fonts/css/all.css",
+    href: "/static/fonts/css/all.min.css",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
