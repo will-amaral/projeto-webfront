@@ -61,7 +61,7 @@ function Exercicios() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!****************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fexercicios&absolutePagePath=%2Fhome%2Fwill%2FDocuments%2FSchool%2Fprojeto-ifsp%2Fwebfront%2Fpages%2Fexercicios.js ***!
   \****************************************************************************************************************************************************************/
@@ -84,5 +84,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]);
+},[[6,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=exercicios.js.map

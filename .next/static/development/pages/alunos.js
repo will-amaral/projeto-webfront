@@ -61,7 +61,7 @@ function Alunos() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 10:
 /*!********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Falunos&absolutePagePath=%2Fhome%2Fwill%2FDocuments%2FSchool%2Fprojeto-ifsp%2Fwebfront%2Fpages%2Falunos.js ***!
   \********************************************************************************************************************************************************/
@@ -84,5 +84,5 @@ module.exports = dll_01f9a3fa864a7b7414d8;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[10,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=alunos.js.map

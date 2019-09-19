@@ -88,10 +88,90 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./components/Dashboard/Activity.js":
+/*!******************************************!*\
+  !*** ./components/Dashboard/Activity.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Activity; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bloomer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bloomer */ "bloomer");
+/* harmony import */ var bloomer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bloomer__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/home/will/Documents/School/projeto-ifsp/webfront/components/Dashboard/Activity.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function Activity() {
+  return __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Media"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["MediaLeft"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+    isSize: "small",
+    className: "fa fa-bell",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  })), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["MediaContent"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Content"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx("small", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, "2 minutos atr\xE1s"), __jsx("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }), __jsx("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "Fulano de Tal"), " entrou no sistema"))));
+}
+
+/***/ }),
 
 /***/ "./components/Dashboard/CardItem.js":
 /*!******************************************!*\
@@ -111,7 +191,10 @@ var _jsxFileName = "/home/will/Documents/School/projeto-ifsp/webfront/components
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-function CardItem(props) {
+function CardItem({
+  title,
+  children
+}) {
   return __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Card"], {
     __source: {
       fileName: _jsxFileName,
@@ -130,54 +213,19 @@ function CardItem(props) {
       lineNumber: 10
     },
     __self: this
-  }, props.title), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["CardHeaderIcon"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
-    className: "fa fa-angle-down",
+  }, title)), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["CardContent"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
     },
     __self: this
-  }))), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["CardContent"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
   }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Content"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 13
     },
     __self: this
-  }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Control"], {
-    hasIcons: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Input"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
-    isSize: "medium",
-    isAlign: "left",
-    className: "fa fa-search",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  })))));
+  }, children)));
 }
 
 /***/ }),
@@ -265,6 +313,9 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function Tiles() {
   return __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Tile"], {
+    style: {
+      marginTop: 15
+    },
     isAncestor: true,
     hasTextAlign: "centered",
     __source: {
@@ -273,7 +324,7 @@ function Tiles() {
     },
     __self: this
   }, __jsx(_TileItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "439k",
+    title: "400k",
     subtitle: "Fichas Abertas",
     __source: {
       fileName: _jsxFileName,
@@ -281,27 +332,19 @@ function Tiles() {
     },
     __self: this
   }), __jsx(_TileItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "59k",
-    subtitle: "Alunos",
+    title: "400k",
+    subtitle: "Fichas Abertas",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
   }), __jsx(_TileItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "3.4k",
-    subtitle: "Professores",
+    title: "400k",
+    subtitle: "Fichas Abertas",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
-    },
-    __self: this
-  }), __jsx(_TileItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    title: "19",
-    subtitle: "Solicita\xE7\xF5es",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
     },
     __self: this
   }));
@@ -323,9 +366,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var bloomer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bloomer */ "bloomer");
 /* harmony import */ var bloomer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bloomer__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Tiles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Tiles */ "./components/Dashboard/Tiles.js");
-/* harmony import */ var _CardItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CardItem */ "./components/Dashboard/CardItem.js");
-/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles */ "./components/styles.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! recharts */ "recharts");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(recharts__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Tiles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Tiles */ "./components/Dashboard/Tiles.js");
+/* harmony import */ var _CardItem__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CardItem */ "./components/Dashboard/CardItem.js");
+/* harmony import */ var _SimpleInput__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../SimpleInput */ "./components/SimpleInput.js");
+/* harmony import */ var _Activity__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Activity */ "./components/Dashboard/Activity.js");
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles */ "./components/styles.js");
 var _jsxFileName = "/home/will/Documents/School/projeto-ifsp/webfront/components/Dashboard/index.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -333,90 +380,216 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
+
+
 function Dashboard({
   profile
 }) {
+  const data = [{
+    "name": "Page A",
+    "uv": 4000,
+    "pv": 2400,
+    "amt": 2400
+  }, {
+    "name": "Page B",
+    "uv": 3000,
+    "pv": 1398,
+    "amt": 2210
+  }, {
+    "name": "Page C",
+    "uv": 2000,
+    "pv": 9800,
+    "amt": 2290
+  }, {
+    "name": "Page D",
+    "uv": 2780,
+    "pv": 3908,
+    "amt": 2000
+  }, {
+    "name": "Page E",
+    "uv": 1890,
+    "pv": 4800,
+    "amt": 2181
+  }, {
+    "name": "Page F",
+    "uv": 2390,
+    "pv": 3800,
+    "amt": 2500
+  }, {
+    "name": "Page G",
+    "uv": 3490,
+    "pv": 4300,
+    "amt": 2100
+  }];
   return __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     isSize: 9,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 58
     },
     __self: this
   }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Hero"], {
     isColor: "primary",
     isSize: "small",
-    style: _styles__WEBPACK_IMPORTED_MODULE_4__["default"].gradient,
+    style: _styles__WEBPACK_IMPORTED_MODULE_7__["default"].gradient,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 59
     },
     __self: this
   }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["HeroBody"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 60
     },
     __self: this
   }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Title"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 61
     },
     __self: this
-  }, "Ol\xE1, jovem ", profile.name), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Subtitle"], {
+  }, "Ol\xE1, ", profile.name), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Subtitle"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 62
     },
     __self: this
-  }, "Tenha um \xF3timo dia!"))), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Section"], {
+  }, "Tenha um \xF3timo dia!"))), __jsx(_Tiles__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 65
     },
     __self: this
-  }, __jsx(_Tiles__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Columns"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  })), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Columns"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 66
     },
     __self: this
   }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     isSize: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 67
     },
     __self: this
-  }, __jsx(_CardItem__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    title: "Buscar usu\xE1rios",
+  }, __jsx(_CardItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: "Feed de Atividades",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 68
     },
     __self: this
-  })), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Column"], {
+  }, __jsx(_Activity__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }), __jsx(_Activity__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  }), __jsx(_Activity__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
+  }))), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Column"], {
     isSize: 6,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 74
     },
     __self: this
-  }, __jsx(_CardItem__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    title: "Buscar exerc\xEDcios",
+  }, __jsx(_SimpleInput__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 75
     },
     __self: this
-  }))));
+  }), __jsx(_CardItem__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    title: "Progress\xE3o Mensal",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_2__["BarChart"], {
+    width: 370,
+    height: 178,
+    data: data,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
+  }, __jsx(recharts__WEBPACK_IMPORTED_MODULE_2__["Bar"], {
+    dataKey: "pv",
+    fill: "#F37335",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }))))));
+}
+
+/***/ }),
+
+/***/ "./components/SimpleInput.js":
+/*!***********************************!*\
+  !*** ./components/SimpleInput.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SimpleInput; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bloomer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bloomer */ "bloomer");
+/* harmony import */ var bloomer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bloomer__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "/home/will/Documents/School/projeto-ifsp/webfront/components/SimpleInput.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function SimpleInput() {
+  return __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Field"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Control"], {
+    hasIcons: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Input"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }), __jsx(bloomer__WEBPACK_IMPORTED_MODULE_1__["Icon"], {
+    isSize: "medium",
+    isAlign: "left",
+    className: "fa fa-search",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  })));
 }
 
 /***/ }),
@@ -631,7 +804,7 @@ function auth(ctx) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -717,6 +890,17 @@ module.exports = require("next/router");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "recharts":
+/*!***************************!*\
+  !*** external "recharts" ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("recharts");
 
 /***/ })
 

@@ -3,21 +3,15 @@ import { Card, CardHeader, CardHeaderTitle,
     Icon, Control, Input 
 } from 'bloomer';
 
-export default function CardItem(props) {
+export default function CardItem({ title, children }) {
     return (
         <Card>
             <CardHeader>
-                <CardHeaderTitle>{props.title}</CardHeaderTitle>
-                <CardHeaderIcon>
-                    <Icon className="fa fa-angle-down"/>
-                </CardHeaderIcon>
+                <CardHeaderTitle>{title}</CardHeaderTitle>
             </CardHeader>
             <CardContent>
                 <Content>
-                    <Control hasIcons>
-                        <Input />
-                        <Icon isSize="medium" isAlign="left" className="fa fa-search"/>
-                    </Control>
+                    {children}
                 </Content>
             </CardContent>
         </Card>

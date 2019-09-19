@@ -11,7 +11,7 @@ export default function Master({ children }) {
                 key="viewport"
                 />
                 <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
-                <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"/>
+                <link rel="stylesheet" href="/static/fonts/css/all.css"/>
             </Head>
             { children }
         </>

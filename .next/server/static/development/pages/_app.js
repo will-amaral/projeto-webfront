@@ -513,9 +513,9 @@ function Master({
       lineNumber: 13
     },
     __self: this
-  }), __jsx("script", {
-    defer: true,
-    src: "https://use.fontawesome.com/releases/v5.1.0/js/all.js",
+  }), __jsx("link", {
+    rel: "stylesheet",
+    href: "/static/fonts/css/all.css",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
