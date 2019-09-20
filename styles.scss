@@ -5,3 +5,7 @@ $radius: 8px;
 $menu-item-active-background-color: $turquoise;
 $breadcrumb-item-color: $white;
 @import "~bulma/bulma";
+
+.image img {
+    border-radius: 50%;
+}

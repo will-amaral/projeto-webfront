@@ -17,8 +17,8 @@ export default function Header({ handleLogout }) {
                     <NavbarEnd>
                         <NavbarItem>
                             <Button isOutlined isColor='primary' onClick={handleLogout}>
-                            <Icon isSize='small' className='fas fa-sign-out-alt'/>
-                            <span>Sair</span>
+                                <Icon isSize='small' className='fas fa-sign-out-alt'/>
+                                <span>Sair</span>
                             </Button>
                         </NavbarItem>
                     </NavbarEnd>

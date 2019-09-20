@@ -6956,5 +6956,8 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.image img {
+  border-radius: 50%; }
+
 
 /*# sourceMappingURL=styles.chunk.css.map*/

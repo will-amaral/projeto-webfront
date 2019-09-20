@@ -3,7 +3,7 @@ import { Columns, Column, Hero,
 } from 'bloomer';
 import { BarChart, Bar } from 'recharts';
 import Tiles from './Tiles';
-import CardItem from './CardItem';
+import CardItem from '../CardItem';
 import SimpleInput from '../SimpleInput';
 import Activity from './Activity';
 import styles from '../styles';
@@ -55,7 +55,7 @@ export default function Dashboard({ profile }) {
       ]
       
     return (
-        <Column isSize={9}>
+        <Column>
             <Hero isColor="primary" isSize="small" style={styles.gradient}>
                 <HeroBody>
                     <Title>Olá, {profile.name}</Title>
