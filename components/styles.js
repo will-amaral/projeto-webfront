@@ -15,6 +15,23 @@ const styles = {
     gradient: {
         background: `linear-gradient(
             141deg, #04DB92 0%, #00D9D5 100%)`
+    },
+    levelBar: {
+        borderRadius: '10%', 
+        width: '100%', 
+        height: '0.2rem', 
+        marginTop: 20,
+    },
+    sectionTitle: {
+        color: '#BBBBBB',
+        fontWeight: '400',
+        letterSpacing: '0.1rem'
+    },
+    separator: {
+        width: '100%', 
+        height: '0.05rem', 
+        backgroundColor: '#BBBBBB',
+        marginBottom: 10
     }
 }
 

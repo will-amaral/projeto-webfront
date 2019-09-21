@@ -25,6 +25,10 @@
     "/professores": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
+    ],
+    "/professores/[id]": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

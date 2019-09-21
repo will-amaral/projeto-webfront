@@ -8,7 +8,8 @@ export default function Sidebar() {
     const router = useRouter();
 
     function isActive(path) {
-        if (path === router.pathname) {
+        console.log(router.pathname)
+        if (path === router.pathname || path + '/[id]' === router.pathname) {
             return true;
         } else {
             return false

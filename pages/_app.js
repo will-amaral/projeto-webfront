@@ -2,10 +2,9 @@ import React from 'react'
 import App from 'next/app'
 import AppContainer from '../components/AppContainer';
 import Master from '../components/Master';
-import { withRouter } from 'next/router';
 import '../styles.scss';
 
-class MyApp extends App {
+export default class MyApp extends App {
   render() {
     const { Component, pageProps, router } = this.props
 
@@ -26,5 +25,3 @@ class MyApp extends App {
     );
   }
 }
-
-export default withRouter(MyApp)

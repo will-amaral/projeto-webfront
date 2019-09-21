@@ -1,26 +1,31 @@
 
+import { useState } from 'react';
 import { Column, Columns, Button, Icon } from 'bloomer';
-import CardItem from '../CardItem';
+import CardContainer from '../CardContainer';
 import SimpleInput from '../SimpleInput';
 import Datatable from './Datatable';
+import AddAluno from './AddAluno';
 
 export default function Alunos() {
+    const [modal, setModal] = useState(false);
+
     return (
         <Column>
             <Columns>
                 <Column isSize={8}>
                     <SimpleInput />
                 </Column>
-                <Column isOffset={1}>
-                    <Button isColor='primary'>
+                <Column hasTextAlign='right'>
+                    <Button isColor='primary' onClick={() => setModal(true)}>
                         <Icon isSize='small' className='fas fa-plus'/>
                         <span>Cadastrar Aluno</span>
                     </Button>
                 </Column>
             </Columns>
-            <CardItem>
+            <CardContainer>
                 <Datatable />
-            </CardItem>
+            </CardContainer>
+            <AddAluno active={modal} close={() => setModal(false)} />
         </Column>
     )
 }

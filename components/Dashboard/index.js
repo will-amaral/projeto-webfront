@@ -3,7 +3,7 @@ import { Columns, Column, Hero,
 } from 'bloomer';
 import { BarChart, Bar } from 'recharts';
 import Tiles from './Tiles';
-import CardItem from '../CardItem';
+import CardContainer from '../CardContainer';
 import SimpleInput from '../SimpleInput';
 import Activity from './Activity';
 import styles from '../styles';
@@ -65,19 +65,19 @@ export default function Dashboard({ profile }) {
             <Tiles />
             <Columns>
                 <Column isSize={6}>
-                    <CardItem title="Feed de Atividades">
+                    <CardContainer title="Feed de Atividades">
                         <Activity />
                         <Activity />
                         <Activity />
-                    </CardItem>
+                    </CardContainer>
                 </Column>
                 <Column isSize={6}>
                     <SimpleInput />
-                    <CardItem title="Progressão Mensal">
+                    <CardContainer title="Progressão Mensal">
                         <BarChart width={370} height={178} data={data}>
                             <Bar dataKey="pv" fill="#F37335" />
                         </BarChart>
-                    </CardItem>
+                    </CardContainer>
                 </Column>
             </Columns>
         </Column>

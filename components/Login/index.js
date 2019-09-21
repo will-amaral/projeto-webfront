@@ -27,11 +27,19 @@ export default function Login() {
                 login(token);
                 Router.push('/');
             } catch (err) {
-                const alert = !err.response ? "Erro de servidor" : err.response.data.message
+                console.log(err.response.data.message)
+                let alert;
+                if (!err.response) {
+                    alert = 'Erro de servidor';
+                } else if (!err.response.data.message) {
+                    alert = err.response.data.errors.map(error => error.msg + '\n');
+                } else {
+                    alert = err.response.data.message;
+                }
                 setMessage(alert)
                 setColor('danger');
+                setLoading(false);
             }
-            setLoading(false);
         }
     };
 
