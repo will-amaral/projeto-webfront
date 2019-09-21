@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{TyCH:function(n,e,c){"use strict";c.r(e);var t=c("q1tI"),i=c.n(t),o=c("SMlj"),u=i.a.createElement;e.default=Object(o.c)(function(){return u("h1",null,"Exerc\xedcios")})},fP2N:function(n,e,c){(window.__NEXT_P=window.__NEXT_P||[]).push(["/exercicios",function(){var n=c("TyCH");return{page:n.default||n}}])}},[["fP2N",1,0]]]);

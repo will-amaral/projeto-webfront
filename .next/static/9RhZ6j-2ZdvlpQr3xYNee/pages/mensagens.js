@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{K0RB:function(n,e,t){"use strict";t.r(e);var a=t("q1tI"),u=t.n(a),c=t("SMlj"),o=u.a.createElement;e.default=Object(c.c)(function(){return o("h1",null,"Mensagens")})},ta4y:function(n,e,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/mensagens",function(){var n=t("K0RB");return{page:n.default||n}}])}},[["ta4y",1,0]]]);

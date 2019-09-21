@@ -1,26 +1,102 @@
 {
-  "devFiles": [
-    "static/development/dll/dll_397dc449097af0b4e992.js",
-    "static/development/dll/dll_397dc449097af0b4e992.js.map"
-  ],
+  "devFiles": [],
   "pages": {
+    "/": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
     "/_app": [
-      "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/css/styles.85116628.chunk.css",
+      "static/chunks/styles.df133d5d830be57841cb.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
     ],
     "/_error": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/ajuda": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
     ],
     "/alunos": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
     ],
     "/alunos/[id]": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/confirmar-senha/[token]": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/confirmar/[token]": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/conta": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/exercicios": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/financeiro": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/index": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/login": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/mensagens": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/perfil": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/professores": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/professores/[id]": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/recuperar-senha": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
+    ],
+    "/relatorios": [
+      "static/runtime/webpack-4b444dab214c6491079c.js",
+      "static/chunks/commons.38efad360e93e04538de.js",
+      "static/runtime/main-f71bfe33d8bc1a02ac78.js"
     ]
   }
 }

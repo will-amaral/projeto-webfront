@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport { withAuth } from '../utils/auth';\n\nfunction Financeiro() {\n  return __jsx(\"h1\", null, \"Financeiro\");\n}\n\nexport default withAuth(Financeiro);","map":null,"metadata":{},"sourceType":"module"}
