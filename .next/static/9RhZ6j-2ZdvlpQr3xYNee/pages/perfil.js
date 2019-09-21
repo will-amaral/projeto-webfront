@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[15],{sHpz:function(n,e,t){"use strict";t.r(e);var u=t("q1tI"),i=t.n(u),r=t("SMlj"),c=i.a.createElement;e.default=Object(r.c)(function(){return c("h1",null,"Perfil")})},uEGb:function(n,e,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/perfil",function(){var n=t("sHpz");return{page:n.default||n}}])}},[["uEGb",1,0]]]);

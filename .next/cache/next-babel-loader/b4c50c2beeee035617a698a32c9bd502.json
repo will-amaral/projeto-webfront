@@ -1,1 +1,0 @@
-{"ast":null,"code":"import React from \"react\";\nvar __jsx = React.createElement;\nimport { withAuth } from '../../utils/auth';\nimport ProfessoresDashboard from '../../components/Professores';\n\nfunction Professores() {\n  return __jsx(ProfessoresDashboard, null);\n}\n\nexport default withAuth(Professores);","map":null,"metadata":{},"sourceType":"module"}

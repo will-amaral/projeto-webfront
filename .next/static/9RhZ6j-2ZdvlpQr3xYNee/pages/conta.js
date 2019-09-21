@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{"+lcz":function(n,t,a){"use strict";a.r(t);var c=a("q1tI"),e=a.n(c),o=a("SMlj"),u=e.a.createElement;t.default=Object(o.c)(function(){return u("h1",null,"Conta")})},aPRw:function(n,t,a){(window.__NEXT_P=window.__NEXT_P||[]).push(["/conta",function(){var n=a("+lcz");return{page:n.default||n}}])}},[["aPRw",1,0]]]);
