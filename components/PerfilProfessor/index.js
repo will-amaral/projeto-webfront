@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Perfil from './Perfil';
 import Main from './Main';
 import { data } from '../mockData';
-import DropOptions from './DropOptions'
+import DropOptions from '../DropOptions'
 
 export default function PerfilAluno({ id }) {
     const { name, area, email, level, photo } = data.find(obj => obj.id.toString() === id);
@@ -20,7 +20,7 @@ export default function PerfilAluno({ id }) {
                     </Link>
                 </Column>
                 <Column hasTextAlign='right'>
-                    <DropOptions />
+                    <DropOptions buttonName='Editar Professor'/>
                 </Column>
             </Columns>
             <Columns>

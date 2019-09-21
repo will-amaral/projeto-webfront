@@ -6,4 +6,4 @@ function Relatorios() {
     )
 }
 
-export default withAuth(Relatorios);
+export default withAuth(Relatorios)

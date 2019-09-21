@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Title, Subtitle, Columns } from 'bloomer';
-import Container from '../BoldContainer';
+import { Title, Subtitle, Columns, Section, Container } from 'bloomer';
 import CustomNotification from '../CustomNotification';
 import Form from './Form';
 
@@ -14,17 +13,21 @@ export default function Signup() {
     }
 
     return (
-        <Container>
-            <Title>Crie sua conta</Title>
-            <Subtitle>Entre seus dados abaixo para criar uma conta</Subtitle>
+        <Container hasTextAlign='centered'>
+            <Section>
+            <Title>Criar novo usuário</Title>
+            <Subtitle>Entre os dados abaixo para criar uma nova conta</Subtitle>
             <CustomNotification
                     message={message}
                     color={color}
                     close={()=> setMessage('')}
             />
+            </Section>
+            <Section>
             <Columns isCentered>
                 <Form loading={loading} handleSignup={handleSignup} />
             </Columns>
+            </Section>
         </Container>
     );
 }

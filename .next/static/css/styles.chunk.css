@@ -4081,7 +4081,7 @@ a.list-item {
     display: flex; }
 
 .modal-background {
-  background-color: #00d1b2; }
+  background-color: rgba(10, 10, 10, 0.86); }
 
 .modal-content,
 .modal-card {
@@ -4095,7 +4095,7 @@ a.list-item {
     .modal-card {
       margin: 0 auto;
       max-height: calc(100vh - 40px);
-      width: 800px; } }
+      width: 640px; } }
 
 .modal-close {
   background: none;

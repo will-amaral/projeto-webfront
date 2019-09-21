@@ -340,30 +340,26 @@ var routes = {
     name: 'Financeiro',
     key: 5
   }, {
-    path: '/saude',
-    name: 'Histórico de Saúde',
+    path: '/mensagens',
+    name: 'Mensagens',
     key: 6
-  }, {
-    path: '/alertas',
-    name: 'Alertas',
-    key: 7
   }, {
     path: '/relatorios',
     name: 'Relatórios',
-    key: 8
+    key: 7
   }],
   config: [{
     path: '/perfil',
     name: 'Meu Perfil',
-    key: 9
+    key: 8
   }, {
     path: '/conta',
     name: 'Minha Conta',
-    key: 10
+    key: 9
   }, {
     path: '/ajuda',
     name: 'Ajuda',
-    key: 11
+    key: 10
   }]
 };
 

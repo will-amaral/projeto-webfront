@@ -32,7 +32,7 @@ export default function Login() {
                 if (!err.response) {
                     alert = 'Erro de servidor';
                 } else if (!err.response.data.message) {
-                    alert = err.response.data.errors.map(error => error.msg + '\n');
+                    alert = 'Senha incorreta'
                 } else {
                     alert = err.response.data.message;
                 }

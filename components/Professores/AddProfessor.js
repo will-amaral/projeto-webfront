@@ -1,9 +1,10 @@
 import ModalContainer from '../ModalContainer';
+import Signup from '../Signup';
 
 export default function AddProfessor({ active, close }) {
     return (
-        <ModalContainer active={active} close={close}>
-            <h1>Formulário para adicionar professor</h1>
+        <ModalContainer colored active={active} close={close}>
+            <Signup />
         </ModalContainer>
     )
 }

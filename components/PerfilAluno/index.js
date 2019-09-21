@@ -1,6 +1,7 @@
 import { Columns, Column, Icon, Button } from 'bloomer';
 import Link from 'next/link';
 import Perfil from './Perfil';
+import DropOptions from '../DropOptions'
 
 export default function PerfilAluno(props) {
     return (
@@ -15,10 +16,7 @@ export default function PerfilAluno(props) {
                     </Link>
                 </Column>
                 <Column hasTextAlign='right'>
-                    <Button isColor='primary'>
-                        <Icon isSize='small' className='fa fa-user-edit'/>
-                        <span>Editar Aluno</span>
-                    </Button>
+                    <DropOptions buttonName='Editar Aluno' />
                 </Column>
             </Columns>
             <Perfil />

@@ -1,8 +1,5 @@
 import { useState } from 'react';
-import Link from 'next/link';
-import { Field, FieldBody, Control, Button, 
-    Breadcrumb, BreadcrumbItem, Column
-} from 'bloomer';
+import { Field, FieldBody, Control, Button, Column } from 'bloomer';
 import FormField from '../FormField';
 
 export default function Form({ loading, handleSignup}) {
@@ -12,7 +9,7 @@ export default function Form({ loading, handleSignup}) {
     const [confirm, setConfirm] = useState('');
 
     return (
-        <Column tag='form' isSize='2/3' onSubmit={handleSignup}>
+        <Column tag='form' onSubmit={handleSignup}>
             <Field isHorizontal>
                 <FieldBody>
                     <FormField group expand
@@ -20,14 +17,14 @@ export default function Form({ loading, handleSignup}) {
                         onChange={event => setName(event.target.value)}
                         type='text'
                         value={name}
-                        placeholder='Entre seu nome'
+                        placeholder='Entre o nome'
                     />
                     <FormField
                         icon='envelope'
                         onChange={event => setEmail(event.target.value)}
                         type='email'
                         value={email}
-                        placeholder='Entre seu e-mail'
+                        placeholder='Entre o e-mail'
                     />
                 </FieldBody>
             </Field>
@@ -38,30 +35,25 @@ export default function Form({ loading, handleSignup}) {
                         onChange={event => setPassword(event.target.value)}
                         type='password'
                         value={password}
-                        placeholder='Entre sua senha'
+                        placeholder='Entre a senha'
                     />
                     <FormField 
                         icon='lock'
                         onChange={event => setConfirm(event.target.value)}
                         type='password'
                         value={confirm}
-                        placeholder='Confirme a sua senha'
+                        placeholder='Confirme a senha'
                     />
                 </FieldBody>
             </Field>
             <Field>
                 <Control hasTextAlign="centered">
                 {loading
-                ? <Button isFullWidth isLoading/>
-                : <Button isFullWidth isColor="white" isOutlined type="submit">Entrar</Button>
+                ? <Button isLoading/>
+                : <Button isColor='primary' isOutlined type="submit">Criar Usuário</Button>
                 }
                 </Control>
             </Field>
-            <Breadcrumb isAlign='centered'>
-                <ul>
-                    <BreadcrumbItem><Link href='/login'><a>Voltar</a></Link></BreadcrumbItem>
-                </ul>
-            </Breadcrumb>
         </Column>
     )
 }
