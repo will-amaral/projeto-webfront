@@ -33,11 +33,6 @@ export default function Form({ loading, handleSubmit}) {
                     }
                 </Control>
             </Field>
-            <Field>
-                <Control hasTextAlign="centered">
-                    <Checkbox> Lembrar de mim </Checkbox>
-                </Control>
-            </Field>
             <Breadcrumb isAlign="centered">
                 <ul>
                     <BreadcrumbItem><Link href='/recuperar-senha'><a>Recuperar a senha</a></Link></BreadcrumbItem>

@@ -1,9 +1,12 @@
-import { Columns, Column, Icon, Button } from 'bloomer';
+import { Columns, Column, Icon } from 'bloomer';
 import Link from 'next/link';
 import Perfil from './Perfil';
-import DropOptions from '../DropOptions'
+import DropOptions from '../DropOptions';
+import { data } from '../mockData2';
 
-export default function PerfilAluno(props) {
+export default function PerfilAluno({ id }) {
+    const { name, active, email, photo } = data.find(obj => obj.id.toString() === id);
+
     return (
         <Column>
             <Columns>
@@ -19,7 +22,12 @@ export default function PerfilAluno(props) {
                     <DropOptions buttonName='Editar Aluno' />
                 </Column>
             </Columns>
-            <Perfil />
+            <Perfil
+            name={name}
+            active={active}
+            email={email}
+            photo={photo}
+            />
         </Column>
     )
 }

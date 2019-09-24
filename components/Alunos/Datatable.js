@@ -1,63 +1,13 @@
 import { Table, Checkbox, Icon } from 'bloomer';
 import TableItem from './TableItem';
+import { data } from '../mockData2';
 
 export default function DataTable() {
-    const data = [
-        {
-            name: 'Fulana de Tal',
-            change: '21 de Dezembro',
-            status: 'Active',
-            id: 1
-        },
-        {
-            name: 'Fulano de Tal',
-            change: '22 de Dezembro',
-            status: 'Active',
-            id: 2
-        },
-        {
-            name: 'Fulaninha de Tal',
-            change: '19 de Dezembro',
-            status: 'Inactive',
-            id: 3
-        },
-        {
-            name: 'Fulana de Tal',
-            change: '21 de Dezembro',
-            status: 'Active',
-            id: 4
-        },
-        {
-            name: 'Fulana de Tal',
-            change: '21 de Dezembro',
-            status: 'Inactive',
-            id: 5
-        },
-        {
-            name: 'Fulana de Tal',
-            change: '21 de Dezembro',
-            status: 'Active',
-            id: 6
-        },
-        {
-            name: 'Fulana de Tal',
-            change: '21 de Dezembro',
-            status: 'Active',
-            id: 7
-        },
-        {
-            name: 'Fulana de Tal',
-            change: '21 de Dezembro',
-            status: 'Active',
-            id: 8
-        },
-
-    ]
 
     const items = data.map(item => <TableItem 
         name={item.name}
         change={item.change}
-        status={item.status}
+        active={item.active}
         key={item.id}
         id={item.id}
     />)

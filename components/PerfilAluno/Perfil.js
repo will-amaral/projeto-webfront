@@ -4,20 +4,21 @@ import { Section, Columns, Column, Image, Title, Subtitle,
 } from 'bloomer';
 import SectionTitle from './SectionTitle'
 
-export default function Perfil() {
+export default function Perfil({ name, active, email, photo }) {
+    const icon = active ? 'check' : 'times';
     return (
         <Box>
             <Section>
                 <Media>
                     <MediaLeft>
-                        <Image isSize='96x96' src='https://i.pravatar.cc/150?img=13' />
+                        <Image isSize='96x96' src={photo} />
                     </MediaLeft>
                     <MediaContent>
-                        <Title>Fulano de Tal</Title>
-                        <Subtitle hasTextColor='primary' isSize={5}>fulano@detal.com</Subtitle>
-                        <Subtitle hasTextColor='success' isSize={6}>
-                            <Icon style={{ marginRight: 10 }} isSize='small' className='fas fa-check-circle'/>
-                            conta ativa
+                        <Title>{name}</Title>
+                        <Subtitle hasTextColor='primary' isSize={5}>{email}</Subtitle>
+                        <Subtitle hasTextColor={active ? 'success' : 'danger'} isSize={6}>
+                            <Icon style={{ marginRight: 10 }} isSize='small' className={`fas fa-${icon}-circle`}/>
+                            conta {active ? 'ativa' : 'inativa'}
                         </Subtitle>
                     </MediaContent>
                     <MediaRight>
