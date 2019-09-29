@@ -1,7 +1,9 @@
-import { Section, Columns, Column, Image, Title, Subtitle,
+import {
+    Section, Columns, Column, Image, Title, Subtitle,
     Media, MediaContent, MediaLeft, MediaRight, Icon,
     Level, LevelRight, LevelItem, Content, Box
 } from 'bloomer';
+import ProgressiveImage from 'react-progressive-image';
 import SectionTitle from './SectionTitle'
 
 export default function Perfil({ name, active, email, photo }) {
@@ -17,23 +19,23 @@ export default function Perfil({ name, active, email, photo }) {
                         <Title>{name}</Title>
                         <Subtitle hasTextColor='primary' isSize={5}>{email}</Subtitle>
                         <Subtitle hasTextColor={active ? 'success' : 'danger'} isSize={6}>
-                            <Icon style={{ marginRight: 10 }} isSize='small' className={`fas fa-${icon}-circle`}/>
+                            <Icon style={{ marginRight: 10 }} isSize='small' className={`fas fa-${icon}-circle`} />
                             conta {active ? 'ativa' : 'inativa'}
                         </Subtitle>
                     </MediaContent>
                     <MediaRight>
-                    <Level>
-                        <LevelRight hasTextColor='primary'>
+                        <Level>
+                            <LevelRight hasTextColor='primary'>
                                 <LevelItem>
                                     <Title isSize={4} hasTextColor='primary'>R$ 80,00</Title>
                                 </LevelItem>
                                 <LevelItem>
-                                    <Icon isSize='large' className='fas fa-chart-pie fa-2x'/>
+                                    <Icon isSize='large' className='fas fa-chart-pie fa-2x' />
                                 </LevelItem>
                                 <LevelItem>
                                     <Icon isSize='large' className='fas fa-envelope fa-2x' />
                                 </LevelItem>
-                        </LevelRight>
+                            </LevelRight>
                         </Level>
                     </MediaRight>
                 </Media>
@@ -62,7 +64,7 @@ export default function Perfil({ name, active, email, photo }) {
                 </Columns>
             </Section>
             <Section>
-            <Columns>
+                <Columns>
                     <Column>
                         <SectionTitle>CONTATO</SectionTitle>
                         <Content>
