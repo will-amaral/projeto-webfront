@@ -13,10 +13,8 @@ export default function PerfilAluno() {
       <Columns>
         <Column>
           <Link to='/alunos'>
-            <a>
-              <Icon isSize='large' className='fa fa-arrow-left' />
-              Voltar
-            </a>
+            <Icon isSize='large' className='fa fa-arrow-left' />
+            Voltar
           </Link>
         </Column>
         <Column hasTextAlign='right'>

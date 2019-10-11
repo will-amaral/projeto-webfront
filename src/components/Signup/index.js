@@ -9,6 +9,8 @@ export default function Signup() {
   const [loading, setLoading] = useState(false);
 
   async function handleSignup() {
+    setColor('danger');
+    setLoading(true);
     return;
   }
 

@@ -20,10 +20,8 @@ export default function PerfilProfessor() {
       <Columns>
         <Column>
           <Link to='/professores'>
-            <a>
-              <Icon isSize='large' className='fa fa-arrow-left' />
-              Voltar
-            </a>
+            <Icon isSize='large' className='fa fa-arrow-left' />
+            Voltar
           </Link>
         </Column>
         <Column hasTextAlign='right'>

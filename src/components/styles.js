@@ -41,15 +41,12 @@ export const color = level => {
   switch (level) {
     case 'Líder':
       return '#00d1b2';
-      break;
 
     case 'Coordenação':
       return '#AE35F3';
-      break;
 
     case 'Estágio':
       return '#F37335';
-      break;
 
     default:
       break;
