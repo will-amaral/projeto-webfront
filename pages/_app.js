@@ -5,36 +5,45 @@
  * inicial, e todos as suas propriedades individuais, bem como um objeto de rotas.
  * Aqui importamos os estilos globais para toda a aplicação, o AppContainer,
  * que contém os componentes imutáveis e o componente Master, que contém as configurações
- * de metatags. 
- * 
+ * de metatags.
+ *
  * As páginas que não utilizam o container da aplicação são retornadas após a verificação
  * por meio das rotas.
  */
 
-import React from 'react'
-import App from 'next/app'
+import React from 'react';
+import App from 'next/app';
+import { Provider } from 'react-redux';
+import withReduxStore from '../utils/with-redux-store';
 import AppContainer from '../components/AppContainer';
 import Master from '../components/Master';
 import '../styles.scss';
 
-export default class MyApp extends App {
+class MyApp extends App {
   render() {
-    const { Component, pageProps, router } = this.props
+    const { Component, pageProps, router, reduxStore } = this.props;
 
-    if (router.pathname === '/login' || router.pathname === '/recuperar-senha') {
-        return (
-            <Master>
-                <Component {...pageProps} />
-            </Master>
-        )
+    if (
+      router.pathname === '/login' ||
+      router.pathname === '/recuperar-senha'
+    ) {
+      return (
+        <Master>
+          <Component {...pageProps} />
+        </Master>
+      );
     }
 
     return (
+      <Provider store={reduxStore}>
         <Master>
-            <AppContainer>
-                <Component {...pageProps } />
-            </AppContainer>
+          <AppContainer>
+            <Component {...pageProps} />
+          </AppContainer>
         </Master>
+      </Provider>
     );
   }
 }
+
+export default withReduxStore(MyApp);

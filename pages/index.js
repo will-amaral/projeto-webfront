@@ -1,22 +1,13 @@
 import Dashboard from '../components/Dashboard';
-import api from '../utils/api';
+import { fetchUsers } from '../actions';
 import { withAuth } from '../utils/auth';
 
-function Index({ user }) {
-    return (
-        <Dashboard profile={user}/>
-    );
+function Index() {
+  return <Dashboard profile={{ name: 'Willian Amaral' }} />;
 }
 
-Index.getInitialProps = async function(ctx) {
-    try {
-        const { data } = await api.get('/user/profile');
-        return { user: data.profile };
-    } catch (error) {
-        console.log('Erro de requisição')
-    }
-}
+Index.getInitialProps = async function({ reduxStore }) {
+  reduxStore.dispatch(fetchUsers());
+};
 
 export default withAuth(Index);
-
-
