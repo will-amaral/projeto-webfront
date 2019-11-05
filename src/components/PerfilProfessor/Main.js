@@ -3,7 +3,7 @@ import { Box, Image, Title, Subtitle, Tag } from 'bloomer';
 import styles, { color } from '../styles';
 
 export default function Main({ user }) {
-  const { name, specialty, role } = user;
+  const { name, specialty, role, thumbnail } = user;
   const style = {
     marginLeft: 'auto',
     marginRight: 'auto',
@@ -13,7 +13,7 @@ export default function Main({ user }) {
   };
   return (
     <Box hasTextAlign='centered'>
-      <Image style={style} isSize='128x128' src='' />
+      <Image style={style} isSize='128x128' src={thumbnail} />
       <Title>{name}</Title>
       <Subtitle isSize={5}>{specialty}</Subtitle>
       <Tag isColor='dark' style={{ backgroundColor: color(role) }}>

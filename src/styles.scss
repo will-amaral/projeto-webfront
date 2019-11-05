@@ -1,7 +1,7 @@
 @charset "utf-8";
-@import "~bulma/sass/utilities/initial-variables";
-@import "~bulma/sass/utilities/functions";
-$green: #34FF1D;
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+$green: #34ff1d;
 $radius: 8px;
 $menu-item-active-background-color: $turquoise;
 $breadcrumb-item-color: $white;
@@ -10,24 +10,24 @@ $body-overflow-y: auto;
 $section-padding: 1rem 1.5rem;
 $title-color: $grey-dark;
 $subtitle-color: $grey;
-@import "~bulma/bulma";
+@import '~bulma/bulma';
 
 .image img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .selectable-item {
-    cursor: pointer;
-    :hover {
-        background-color: $white-bis;
-    }
+  cursor: pointer;
+  :hover {
+    background-color: $white-bis;
+  }
 }
 
 .dropdown-item .icon {
-    margin-right: 10px;
+  margin-right: 10px;
 }

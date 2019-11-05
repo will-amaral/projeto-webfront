@@ -27,7 +27,16 @@ export default function Perfil({ id }) {
   const student = students.find(user => user._id === id);
   console.log(student);
   if (!student) return <div>Aluno não encontrado</div>;
-  const { name, email, status, phone, address, financial, birthDate } = student;
+  const {
+    name,
+    email,
+    status,
+    phone,
+    address,
+    financial,
+    birthDate,
+    thumbnail
+  } = student;
   const icon = status ? 'check' : 'times';
 
   return (
@@ -35,7 +44,7 @@ export default function Perfil({ id }) {
       <Section>
         <Media>
           <MediaLeft>
-            <Image isSize='96x96' src='' />
+            <Image isSize='96x96' src={thumbnail} />
           </MediaLeft>
           <MediaContent>
             <Title>{name}</Title>

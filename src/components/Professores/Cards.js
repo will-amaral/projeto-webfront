@@ -14,10 +14,10 @@ export default function Cards() {
       name={item.name}
       area={item.specialty}
       email={item.email}
-      photo={item.photo}
       levelColor={color(item.role)}
       key={item._id}
       id={item._id}
+      thumbnail={item.thumbnail}
     />
   ));
   return <Columns isMultiline>{items}</Columns>;
