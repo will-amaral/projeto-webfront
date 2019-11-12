@@ -4,3 +4,7 @@ export const SIGN_IN = 'SIGN_IN';
 export const SIGN_OUT = 'SIGN_OUT';
 export const TOKEN_KEY = 'TOKEN_KEY';
 export const SIGN_UP = 'SIGN_UP';
+export const SET_MESSAGE = 'SET_MESSAGE';
+export const CLOSE_MESSAGE = 'CLOSE_MESSAGE';
+export const TOGGLE_LOADING = 'TOGGLE_LOADING';
+export const TOGGLE_MODAL = 'TOGGLE_MODAL';

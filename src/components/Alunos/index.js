@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Column, Columns, Button, Icon } from 'bloomer';
 import CardContainer from '../CardContainer';
 import SimpleInput from '../SimpleInput';
 import Datatable from './Datatable';
 import AddAluno from './AddAluno';
+import { toggleModal } from '../../actions';
 
 export default function Alunos() {
-  const [modal, setModal] = useState(false);
+  const modal = useSelector(state => state.modal);
+  const dispatch = useDispatch();
 
   return (
     <Column>
@@ -15,7 +18,7 @@ export default function Alunos() {
           <SimpleInput />
         </Column>
         <Column hasTextAlign='right'>
-          <Button isColor='primary' onClick={() => setModal(true)}>
+          <Button isColor='primary' onClick={() => dispatch(toggleModal(true))}>
             <Icon isSize='small' className='fas fa-plus' />
             <span>Cadastrar Aluno</span>
           </Button>
@@ -24,7 +27,7 @@ export default function Alunos() {
       <CardContainer>
         <Datatable />
       </CardContainer>
-      <AddAluno active={modal} close={() => setModal(false)} />
+      <AddAluno active={modal} close={() => dispatch(toggleModal(false))} />
     </Column>
   );
 }

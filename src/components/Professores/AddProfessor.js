@@ -5,7 +5,7 @@ import Signup from '../Signup';
 export default function AddProfessor({ active, close }) {
   return (
     <ModalContainer colored active={active} close={close}>
-      <Signup />
+      <Signup extend />
     </ModalContainer>
   );
 }

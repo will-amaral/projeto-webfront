@@ -9,9 +9,13 @@ import {
   Icon,
   FieldLabel
 } from 'bloomer';
+import { useDispatch, useSelector } from 'react-redux';
 import FormField from '../FormField';
+import { signUp } from '../../actions';
 
-export default function Form({ loading, extend }) {
+export default function Form({ extend }) {
+  const loading = useSelector(state => state.loading);
+  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [cpf, setCpf] = useState('');
@@ -40,12 +44,13 @@ export default function Form({ loading, extend }) {
     if (extend) {
       data.append('specialty', specialty);
       data.append('role', role);
-      data.append('level', 'Aluno');
+      data.append('level', 'Instrutor');
     } else if (!extend) {
       data.append('financial', JSON.stringify(financial));
-      data.append('level', 'Instrutor');
+      data.append('level', 'Aluno');
     }
     data.append('thumbnail', file);
+    dispatch(signUp(data));
   }
 
   return (

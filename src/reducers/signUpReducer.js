@@ -1,9 +1,9 @@
 import { SIGN_UP } from '../actions/types';
 
-export default (state, action) => {
+export default (state = [], action) => {
   switch (action.type) {
     case SIGN_UP:
-      return true;
+      return action.payload;
 
     default:
       return state;

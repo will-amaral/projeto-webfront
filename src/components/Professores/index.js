@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Column, Columns, Button, Icon } from 'bloomer';
 import SimpleInput from '../SimpleInput';
 import Cards from './Cards';
 import AddProfessor from './AddProfessor';
+import { toggleModal } from '../../actions';
 
 export default function Alunos() {
-  const [modal, setModal] = useState(false);
+  const modal = useSelector(state => state.modal);
+  const dispatch = useDispatch();
+
   return (
     <Column>
       <Columns>
@@ -13,14 +17,14 @@ export default function Alunos() {
           <SimpleInput />
         </Column>
         <Column hasTextAlign='right'>
-          <Button isColor='primary' onClick={() => setModal(true)}>
+          <Button isColor='primary' onClick={() => dispatch(toggleModal(true))}>
             <Icon isSize='small' className='fas fa-plus' />
             <span>Cadastrar Professor</span>
           </Button>
         </Column>
       </Columns>
       <Cards />
-      <AddProfessor active={modal} close={() => setModal(false)} />
+      <AddProfessor active={modal} close={() => dispatch(toggleModal(false))} />
     </Column>
   );
 }
