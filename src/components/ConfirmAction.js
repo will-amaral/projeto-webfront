@@ -1,9 +1,10 @@
 import React from 'react';
 import ModalContainer from './ModalContainer';
 
-export default function ConfirmAction({ active, close }) {
+export default function ConfirmAction({ active, close, confirm }) {
   return (
     <ModalContainer
+      confirm={confirm}
       isCard
       title='Deletar Usuário'
       active={active}

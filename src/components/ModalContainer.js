@@ -20,7 +20,8 @@ export default function ModalContainer({
   children,
   colored,
   isCard,
-  title
+  title,
+  confirm
 }) {
   const style = {
     color: {
@@ -42,7 +43,9 @@ export default function ModalContainer({
           </ModalCardHeader>
           <ModalCardBody>{children}</ModalCardBody>
           <ModalCardFooter>
-            <Button isColor='primary'>Sim</Button>
+            <Button isColor='primary' onClick={confirm}>
+              Sim
+            </Button>
             <Button isColor='danger' onClick={close}>
               Cancelar
             </Button>

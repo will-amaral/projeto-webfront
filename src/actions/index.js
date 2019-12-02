@@ -8,7 +8,8 @@ import {
   SET_MESSAGE,
   CLOSE_MESSAGE,
   TOGGLE_LOADING,
-  TOGGLE_MODAL
+  TOGGLE_MODAL,
+  DELETE_USER
 } from './types';
 import api from '../utils/api';
 
@@ -29,13 +30,12 @@ export const signUp = form => async dispatch => {
     await dispatch({ type: SIGN_UP, payload: data });
     await dispatch(fetchUsers());
     await dispatch(toggleModal(false));
-    dispatch(toggleLoading(false));
   } catch (error) {
     console.log('Erro de requisição');
     console.log(error);
-    await dispatch(toggleLoading(false));
-    dispatch({ type: FETCH_ERROR, payload: error });
+    await dispatch({ type: FETCH_ERROR, payload: error });
   }
+  dispatch(toggleLoading(false));
 };
 
 export const signIn = (email, password) => async dispatch => {
@@ -50,7 +50,7 @@ export const signIn = (email, password) => async dispatch => {
       } = await api.post('/login', { email, password });
       localStorage.setItem(TOKEN_KEY, token);
       await dispatch({ type: SIGN_IN });
-      dispatch(fetchUsers());
+      await dispatch(fetchUsers());
     } catch (err) {
       let text;
       if (!err.response) {
@@ -62,10 +62,25 @@ export const signIn = (email, password) => async dispatch => {
       }
       const message = { text, color: 'danger' };
       await dispatch(setMessage(message));
-      await dispatch(toggleLoading(false));
-      dispatch({ type: FETCH_ERROR, payload: err });
+      await dispatch({ type: FETCH_ERROR, payload: err });
     }
+    dispatch(toggleLoading(false));
   }
+};
+
+export const deleteUser = user => async dispatch => {
+  dispatch(toggleLoading(true));
+  try {
+    console.log('Checando api', user);
+    const { data } = await api.delete('/user/delete', { data: user });
+    await dispatch({ type: DELETE_USER, payload: data._id });
+    await dispatch(fetchUsers());
+  } catch (error) {
+    console.log('Erro de requisição');
+    console.log(error);
+    await dispatch({ type: FETCH_ERROR, payload: error });
+  }
+  dispatch(toggleLoading(false));
 };
 
 export const signOut = () => {

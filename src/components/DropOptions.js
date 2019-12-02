@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   Dropdown,
   DropdownTrigger,
@@ -10,9 +11,16 @@ import {
   DropdownDivider
 } from 'bloomer';
 import ConfirmAction from './ConfirmAction';
+import { deleteUser } from '../actions';
 
-export default function DropOptions({ buttonName }) {
+export default function DropOptions({ buttonName, student }) {
   const [modal, setModal] = useState(false);
+  const dispatch = useDispatch();
+
+  function onDelete() {
+    dispatch(deleteUser(student));
+    setModal(false);
+  }
 
   return (
     <Dropdown isHoverable>
@@ -40,7 +48,7 @@ export default function DropOptions({ buttonName }) {
           </DropdownItem>
         </DropdownContent>
       </DropdownMenu>
-      <ConfirmAction active={modal} close={() => setModal(false)} />
+      <ConfirmAction confirm={onDelete} active={modal} close={() => setModal(false)} />
     </Dropdown>
   );
 }

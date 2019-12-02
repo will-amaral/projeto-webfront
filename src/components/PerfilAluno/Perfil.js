@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import {
   Section,
   Columns,
@@ -21,11 +20,7 @@ import {
 import SectionTitle from './SectionTitle';
 import { calculateAge } from '../../utils/helpers';
 
-export default function Perfil({ id }) {
-  const students = useSelector(state => state.users.students);
-  if (!students) return null;
-  const student = students.find(user => user._id === id);
-  console.log(student);
+export default function Perfil({ student }) {
   if (!student) return <div>Aluno não encontrado</div>;
   const {
     name,

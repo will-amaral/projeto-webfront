@@ -6,6 +6,7 @@ import signUpReducer from './signUpReducer';
 import messageReducer from './messageReducer';
 import loaderReducer from './loaderReducer';
 import modalReducer from './modalReducer';
+import deleteUserReducer from './deleteUserReducer';
 
 export default combineReducers({
   users: usersReducer,
@@ -13,5 +14,6 @@ export default combineReducers({
   addedUsers: signUpReducer,
   message: messageReducer,
   loading: loaderReducer,
-  modal: modalReducer
+  modal: modalReducer,
+  deletedUser: deleteUserReducer
 });

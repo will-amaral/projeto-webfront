@@ -8,3 +8,4 @@ export const SET_MESSAGE = 'SET_MESSAGE';
 export const CLOSE_MESSAGE = 'CLOSE_MESSAGE';
 export const TOGGLE_LOADING = 'TOGGLE_LOADING';
 export const TOGGLE_MODAL = 'TOGGLE_MODAL';
+export const DELETE_USER = 'DELETE_USER';

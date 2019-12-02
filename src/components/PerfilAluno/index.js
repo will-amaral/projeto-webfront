@@ -1,12 +1,16 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Columns, Column, Icon } from 'bloomer';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useParams, Link, Redirect } from 'react-router-dom';
 import Perfil from './Perfil';
 import DropOptions from '../DropOptions';
 
 export default function PerfilAluno() {
   const { id } = useParams();
+  const students = useSelector(state => state.users.students);
+  if (!students) return null;
+  const student = students.find(user => user._id === id);
+  if (!student) return <Redirect to='/alunos' />;
 
   return (
     <Column>
@@ -18,10 +22,10 @@ export default function PerfilAluno() {
           </Link>
         </Column>
         <Column hasTextAlign='right'>
-          <DropOptions buttonName='Editar Aluno' />
+          <DropOptions buttonName='Editar Aluno' student={student} />
         </Column>
       </Columns>
-      <Perfil id={id} />
+      <Perfil student={student} />
     </Column>
   );
 }
