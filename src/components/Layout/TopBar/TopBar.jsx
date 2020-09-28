@@ -26,7 +26,7 @@ function TopBar(props) {
         </Hidden>
         <Hidden mdDown>
           <RouterLink to='/'>
-            <Logo />
+            <Logo white />
           </RouterLink>
         </Hidden>
         <Box ml={2} flexGrow={1} />

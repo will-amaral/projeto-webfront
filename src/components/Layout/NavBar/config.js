@@ -1,4 +1,12 @@
-import { Home, Settings, Users, Briefcase, BarChart } from 'react-feather';
+import {
+  Home,
+  Settings,
+  Users,
+  Briefcase,
+  BarChart,
+  Calendar,
+  MessageCircle,
+} from 'react-feather';
 
 export const adminRoutes = [
   {
@@ -28,6 +36,16 @@ export const adminRoutes = [
         title: 'Relatórios',
         icon: BarChart,
         href: '/gerenciamento/relatorios',
+      },
+      {
+        title: 'Agendamentos',
+        icon: Calendar,
+        href: '/gerenciamento/agendamentos',
+      },
+      {
+        title: 'Mensagens',
+        icon: MessageCircle,
+        href: '/gerenciamento/mensagens',
       },
     ],
   },

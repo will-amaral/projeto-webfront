@@ -37,6 +37,11 @@ function Routes() {
                     path='/gerenciamento/instrutores'
                     component={lazy(() => import('pages/Gerenciamento/Instrutores/List'))}
                   />
+                  <Route
+                    exact
+                    path='/gerenciamento/relatorios'
+                    component={lazy(() => import('pages/Gerenciamento/Relatórios'))}
+                  />
                   <Route component={lazy(() => import('pages/Blank'))} />
                 </Switch>
               </Suspense>

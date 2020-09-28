@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Container, Button, SvgIcon, Paper } from '@material-ui/core';
+import { Container, Button, SvgIcon } from '@material-ui/core';
 import { DataGrid } from '@material-ui/data-grid';
 import { useHistory } from 'react-router-dom';
 import { PlusCircle } from 'react-feather';
 
-import { Page, LoadingScreen, Table, Header, Error404 } from 'components';
+import { Page, LoadingScreen, Header, Error404 } from 'components';
 import { useFetch } from 'utils/hooks';
 import { useListStyles } from './styles';
 import config from './tableConfig';

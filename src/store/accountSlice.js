@@ -33,6 +33,9 @@ const accountSlice = createSlice({
     [login.rejected]: (state) => {
       state.loading = false;
     },
+    [logout.fulfilled]: (state) => {
+      state.user = null;
+    },
   },
 });
 
