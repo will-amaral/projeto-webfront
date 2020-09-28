@@ -16,7 +16,7 @@ import {
 } from '@material-ui/core';
 
 import NavItem from './NavItem';
-import { teacherRoutes, adminRoutes } from './config';
+import { teacherRoutes, adminRoutes, studentRoutes } from './config';
 import { useNavStyles } from './styles';
 import Logo from 'components/Logo';
 
@@ -72,7 +72,12 @@ function NavBar(props) {
   const classes = useNavStyles();
   const location = useLocation();
   const { user } = useSelector((state) => state.account);
-  const navConfig = user.profile === 'admin' ? adminRoutes : teacherRoutes;
+  const navConfig =
+    user.level === 'Admin'
+      ? adminRoutes
+      : user.level === 'Instrutor'
+      ? teacherRoutes
+      : studentRoutes;
 
   useEffect(() => {
     if (openMobile && onMobileClose) {
@@ -108,7 +113,7 @@ function NavBar(props) {
               {user.name}
             </Link>
             <Typography variant='body2' color='textSecondary'>
-              {user.bio}
+              {user.level}
             </Typography>
           </Box>
         </Box>
@@ -136,13 +141,8 @@ function NavBar(props) {
             <Typography variant='h6' color='textPrimary'>
               Está com algum problema?
             </Typography>
-            <Link
-              variant='subtitle1'
-              color='secondary'
-              href='https://api.whatsapp.com/send?phone=553196268077&text=Ol%C3%A1%21'
-              target='_blank'
-            >
-              Fale com o Tony!
+            <Link variant='subtitle1' color='secondary' href='/suporte' target='_blank'>
+              Fale com o suporte
             </Link>
           </Box>
         </Box>

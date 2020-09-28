@@ -30,7 +30,7 @@ function Notifications() {
       id: 1,
       value: 6,
       type: 'check',
-      message: 'correções a fazer',
+      message: 'exercícios planejados',
     },
     {
       id: 2,
@@ -42,7 +42,7 @@ function Notifications() {
       id: 3,
       value: 4,
       type: 'content',
-      message: 'aulas precisam ser planejadas',
+      message: 'perfis precisam de atenção',
     },
   ]);
   const iconsMap = {
@@ -54,7 +54,7 @@ function Notifications() {
     <>
       <Box display='flex' alignItems='center' justifyContent='space-between' mb={2}>
         <Typography className={classes.title} variant='h5' color='textPrimary'>
-          Atividades
+          Notificações
         </Typography>
         <Button component={RouterLink} to='/notificacoes'>
           Ver tudo

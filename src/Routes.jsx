@@ -27,6 +27,16 @@ function Routes() {
                     path='/home'
                     component={lazy(() => import('pages/Home'))}
                   />
+                  <Route
+                    exact
+                    path='/gerenciamento/alunos'
+                    component={lazy(() => import('pages/Gerenciamento/Alunos/List'))}
+                  />
+                  <Route
+                    exact
+                    path='/gerenciamento/instrutores'
+                    component={lazy(() => import('pages/Gerenciamento/Instrutores/List'))}
+                  />
                   <Route component={lazy(() => import('pages/Blank'))} />
                 </Switch>
               </Suspense>

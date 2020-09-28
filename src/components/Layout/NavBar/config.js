@@ -1,5 +1,4 @@
-import { Home, Settings, Folder } from 'react-feather';
-import { School, People } from '@material-ui/icons';
+import { Home, Settings, Users, Briefcase, BarChart } from 'react-feather';
 
 export const adminRoutes = [
   {
@@ -13,33 +12,23 @@ export const adminRoutes = [
     ],
   },
   {
-    subheader: 'Educacional',
+    subheader: 'Gerenciamento',
     items: [
       {
-        title: 'Turmas',
-        icon: People,
-        href: '/educacional/turmas',
+        title: 'Alunos',
+        icon: Users,
+        href: '/gerenciamento/alunos',
       },
       {
-        title: 'Disciplinas',
-        icon: School,
-        href: '/educacional/disciplinas',
+        title: 'Instrutores',
+        icon: Briefcase,
+        href: '/gerenciamento/instrutores',
       },
       {
-        title: 'Biblioteca de Conteúdo',
-        icon: Folder,
-        href: '/educacional/conteudo',
+        title: 'Relatórios',
+        icon: BarChart,
+        href: '/gerenciamento/relatorios',
       },
-      // {
-      //   title: 'Exercicios',
-      //   icon: List,
-      //   href: '/educacional/exercicios',
-      //   items: [
-      //     { title: 'Lista de Exercícios', href: '/educacional/exercicios' },
-      //     { title: 'Adicionar Exercício', href: '/educacional/exercicios/adicionar' },
-      //     { title: 'Detalhes Exercício', href: '/educacional/exercicios/1' },
-      //   ],
-      // },
     ],
   },
   {
@@ -66,17 +55,65 @@ export const teacherRoutes = [
     ],
   },
   {
-    subheader: 'Educacional',
+    subheader: 'Gerenciamento',
     items: [
       {
-        title: 'Turmas',
-        icon: People,
-        href: '/educacional/turmas',
+        title: 'Alunos',
+        icon: Users,
+        href: '/gerenciamento/alunos',
       },
       {
-        title: 'Biblioteca de Conteúdo',
-        icon: Folder,
-        href: '/educacional/conteudo',
+        title: 'Instrutores',
+        icon: Briefcase,
+        href: '/gerenciamento/instrutores',
+      },
+      {
+        title: 'Relatórios',
+        icon: BarChart,
+        href: '/gerenciamento/relatorios',
+      },
+    ],
+  },
+  {
+    subheader: 'Configurações',
+    items: [
+      {
+        title: 'Preferências',
+        icon: Settings,
+        href: '/configuracoes',
+      },
+    ],
+  },
+];
+
+export const studentRoutes = [
+  {
+    subheader: 'Geral',
+    items: [
+      {
+        title: 'Home',
+        icon: Home,
+        href: '/home',
+      },
+    ],
+  },
+  {
+    subheader: 'Gerenciamento',
+    items: [
+      {
+        title: 'Alunos',
+        icon: Users,
+        href: '/gerenciamento/alunos',
+      },
+      {
+        title: 'Instrutores',
+        icon: Briefcase,
+        href: '/gerenciamento/instrutores',
+      },
+      {
+        title: 'Relatórios',
+        icon: BarChart,
+        href: '/gerenciamento/relatorios',
       },
     ],
   },

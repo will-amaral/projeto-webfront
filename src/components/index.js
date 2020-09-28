@@ -2,6 +2,7 @@ export { default as ConfirmationDialog } from './ConfirmationDialog';
 export { default as Error404 } from './Error404';
 export { default as FilesDropzone } from './FilesDropzone';
 export { default as Header } from './Header';
+export { default as Label } from './Label';
 export { default as LoadingButton } from './LoadingButton';
 export { default as LoadingScreen } from './LoadingScreen';
 export { default as Logo } from './Logo';

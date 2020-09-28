@@ -26,7 +26,7 @@ function Home() {
             </Typography>
             <Box mt={2}>
               <Button className={classes.action} variant='contained'>
-                Ver minhas turmas
+                Ver minhas aulas
               </Button>
             </Box>
           </Grid>
