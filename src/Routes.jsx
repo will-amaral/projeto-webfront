@@ -42,6 +42,11 @@ function Routes() {
                     path='/gerenciamento/relatorios'
                     component={lazy(() => import('pages/Gerenciamento/Relatórios'))}
                   />
+                  <Route
+                    exact
+                    path='/gerenciamento/agendamentos'
+                    component={lazy(() => import('pages/Gerenciamento/Agendamentos'))}
+                  />
                   <Route component={lazy(() => import('pages/Blank'))} />
                 </Switch>
               </Suspense>
